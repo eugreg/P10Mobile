@@ -1,11 +1,11 @@
 import { StyleSheet } from "react-native"
 const styles = StyleSheet.create({
     header: {
-        backgroundColor: "#222"
+        backgroundColor: "#FF0000",
+        height: 70,
+        alignItems: "center",
+        justifyContent: "center",
     },
-    Text: {
-        color: "#4a33",
-    }
 })
 
 export default styles
