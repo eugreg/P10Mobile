@@ -23,35 +23,49 @@ export default function App() {
           inactiveTintColor: "red",
         }}
       >
-        <Tab.Screen name="home"
-        component={HomeScreen}
-        options={{
-          tabBarLabel: 'home',
-          tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="home" color={color} size={size} />
-          ),
-        }}/>
-        <Tab.Screen name="Pesquisa"
-        component={HomeScreen}
-        options={{
-          tabBarLabel: 'Pesquisa',
-          tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="search-web" color={color} size={size} />
-          ),
-        }} />
-        <Tab.Screen name="carrinho"
-        component={HomeScreen}
-        options={{
-          tabBarLabel: 'carrinho',
-          tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="shopping" color={color} size={size} />
-          ),
-        }}  />
+        <Tab.Screen
+          name="home"
+          component={HomeScreen}
+          options={{
+            tabBarLabel: "",
+            tabBarIcon: ({ color, size }) => (
+              <MaterialCommunityIcons name="home" color={color} size={size} />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="Pesquisa"
+          component={HomeScreen}
+          options={{
+            tabBarLabel: "",
+            tabBarIcon: ({ color, size }) => (
+              <MaterialCommunityIcons
+                name="search-web"
+                color={color}
+                size={size}
+              />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="carrinho"
+          component={HomeScreen}
+          options={{
+            tabBarLabel: "",
+            tabBarIcon: ({ color, size }) => (
+              <MaterialCommunityIcons
+                name="shopping"
+                color={color}
+                size={size}
+              />
+            ),
+          }}
+        />
         <Tab.Screen
           name="Profile"
           component={HomeScreen}
           options={{
-            tabBarLabel: "Profile",
+            tabBarLabel: "",
             tabBarIcon: ({ color, size }) => (
               <MaterialCommunityIcons
                 name="account"
