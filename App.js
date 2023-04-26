@@ -10,8 +10,9 @@ export default function App() {
 
     <View style={styles.body}>
       <Header />
-      <ScrollView></ScrollView>
+      {/* <ScrollView> */}
       <Nav />
+      {/* </ScrollView> */}
     </View>
     </PaperProvider>
   );

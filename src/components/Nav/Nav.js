@@ -6,8 +6,11 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 function HomeScreen() {
   return (
     <View
-      style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
-    ></View>
+      style={{ }}
+    >
+<Text>OI</Text>
+
+    </View>
   );
 }
 
@@ -27,6 +30,7 @@ export default function App() {
           name="home"
           component={HomeScreen}
           options={{
+            headerShown: false,
             tabBarLabel: "",
             tabBarIcon: ({ color, size }) => (
               <MaterialCommunityIcons name="home" color={color} size={size} />
@@ -37,6 +41,7 @@ export default function App() {
           name="Pesquisa"
           component={HomeScreen}
           options={{
+            headerShown: false,
             tabBarLabel: "",
             tabBarIcon: ({ color, size }) => (
               <MaterialCommunityIcons
@@ -51,6 +56,7 @@ export default function App() {
           name="carrinho"
           component={HomeScreen}
           options={{
+            headerShown: false,
             tabBarLabel: "",
             tabBarIcon: ({ color, size }) => (
               <MaterialCommunityIcons
@@ -65,6 +71,7 @@ export default function App() {
           name="Profile"
           component={HomeScreen}
           options={{
+            headerShown: false,
             tabBarLabel: "",
             tabBarIcon: ({ color, size }) => (
               <MaterialCommunityIcons
