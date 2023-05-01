@@ -1,8 +1,18 @@
 import { View, Image, Text } from "react-native";
 import React, { Component } from "react";
 import styles from "./style.js";
+import {
+  Feather,
+  FontAwesome5,
+  MaterialIcons,
+  Ionicons,
+} from "@expo/vector-icons";
 import { ScrollView } from "react-native";
-import Produtos from "../../components/Produtos/Produtos";
+import Destaques from "../../components/Destaques/Produtos"
+import Visitados from "../../components/Visitados/Produtos"
+import Ofertas from "../../components/Ofertas/Produtos"
+import NovosProdutos from "../../components/Novos/Produtos"
+
 export default class Home extends Component {
   render() {
     return (
@@ -10,7 +20,7 @@ export default class Home extends Component {
         <ScrollView>
           <Image
             style={styles.imagemPromo}
-            source={require("/home/geos/Documentos/desen/P10Mobilegreg/Novo/P10Mobile/assets/img/promo.png")}
+            source={require("../../../assets/img/promo.png")}
           />
           <View style={styles.navCategorias}>
             <Text
@@ -20,48 +30,62 @@ export default class Home extends Component {
             </Text>
             <ScrollView horizontal={true}>
               <View style={styles.cardCategorias}>
-                <Image
-                  style={styles.categoriaImagem}
-                  source={require("/home/geos/Documentos/desen/P10Mobilegreg/Novo/P10Mobile/assets/img/categorias/papelaria.jpg")}
-                />
-                <Text style={{ fontWeight: "600", fontSize: 14 }}>
+                <View style={styles.iconeNav}>
+                  <Feather name="paperclip" size={24} color="white" />
+                </View>
+                <Text
+                  style={{ fontWeight: "600", fontSize: 14, color: "black" }}
+                >
                   Papelaria
                 </Text>
               </View>
               <View style={styles.cardCategorias}>
-                <Image
-                  style={styles.categoriaImagem}
-                  source={require("/home/geos/Documentos/desen/P10Mobilegreg/Novo/P10Mobile/assets/img/categorias/brinquedos.jpg")}
-                />
-                <Text style={{ fontWeight: "600", fontSize: 14 }}>
+                <View style={styles.iconeNav}>
+                  <MaterialIcons name="toys" size={24} color="white" />
+                </View>
+                <Text
+                  style={{ fontWeight: "600", fontSize: 14, color: "black" }}
+                >
                   Brinquedos
                 </Text>
               </View>
               <View style={styles.cardCategorias}>
-                <Image
-                  style={styles.categoriaImagem}
-                  source={require("/home/geos/Documentos/desen/P10Mobilegreg/Novo/P10Mobile/assets/img/categorias/limpeza.jpg")}
-                />
-                <Text style={{ fontWeight: "600", fontSize: 14 }}>Limpeza</Text>
+                <View style={styles.iconeNav}>
+                  <FontAwesome5 name="pump-soap" size={24} color="white" />
+                </View>
+                <Text
+                  style={{ fontWeight: "600", fontSize: 14, color: "black" }}
+                >
+                  Limpeza
+                </Text>
               </View>
               <View style={styles.cardCategorias}>
-                <Image
-                  style={styles.categoriaImagem}
-                  source={require("/home/geos/Documentos/desen/P10Mobilegreg/Novo/P10Mobile/assets/img/categorias/casa.jpg")}
-                />
-                <Text style={{ fontWeight: "600", fontSize: 14 }}>Casa</Text>
+                <View style={styles.iconeNav}>
+                  <FontAwesome5 name="house-damage" size={24} color="white" />
+                </View>
+                <Text
+                  style={{ fontWeight: "600", fontSize: 14, color: "black" }}
+                >
+                  Casa
+                </Text>
               </View>
               <View style={styles.cardCategorias}>
-                <Image
-                  style={styles.categoriaImagem}
-                  source={require("/home/geos/Documentos/desen/P10Mobilegreg/Novo/P10Mobile/assets/img/categorias/roupa.jpg")}
-                />
-                <Text style={{ fontWeight: "600", fontSize: 14 }}>Roupas</Text>
+              <View style={styles.iconeNav}>
+                  <Ionicons name="shirt" size={24} color="white" />
+                </View>
+                <Text
+                  style={{ fontWeight: "600", fontSize: 14, color: "black" }}
+                >
+                  Roupas
+                </Text>
               </View>
             </ScrollView>
           </View>
           <View style={styles.produtos}>
-            <Produtos />
+            <Destaques />
+            <Ofertas />
+            <Visitados />
+            <NovosProdutos />
           </View>
         </ScrollView>
       </View>

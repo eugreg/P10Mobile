@@ -1,7 +1,7 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import Pesquisa from "/home/geos/Documentos/desen/P10Mobilegreg/Novo/P10Mobile/src/Pages/Pesquisa/Pesquisa.js";
-import Home from "/home/geos/Documentos/desen/P10Mobilegreg/Novo/P10Mobile/src/Pages/Home/Home.js";
+import Pesquisa from "../../Pages/Pesquisa/Pesquisa";
+import Home from "../../Pages/Home/Home";
 /*arrumar para o caminho relativo que no meu pc não ta funcionando (geos)*/
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import styles from "./styles";
@@ -10,7 +10,7 @@ const Tab = createBottomTabNavigator();
 
 export default function Nav() {
   return (
-      /*como raios coloca estilo nesse nav? ngm sabe, ou seja, não dá*/
+    /*como raios coloca estilo nesse nav? ngm sabe, ou seja, não dá*/
     <NavigationContainer>
       <Tab.Navigator
         initialRouteName="Nav"

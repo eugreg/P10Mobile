@@ -14,6 +14,6 @@ const styles = StyleSheet.create({
   body: {
     flex: 1,
     backgroundColor: '#fff',
-    marginTop: 20,
+    marginTop: 30,
   },
 });
