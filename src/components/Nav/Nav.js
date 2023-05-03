@@ -1,6 +1,7 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Pesquisa from "../../Pages/Pesquisa/Pesquisa";
+import Produto from "../../Pages/Produto/Produto";
 import Home from "../../Pages/Home/Home";
 /*arrumar para o caminho relativo que no meu pc não ta funcionando (geos)*/
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
@@ -53,7 +54,8 @@ export default function Nav() {
         />
         <Tab.Screen
           name="carrinho"
-          component={Pesquisa}
+          component={Produto}
+          /* por enquanto produto */
           options={{
             headerShown: false,
             tabBarLabel: "",

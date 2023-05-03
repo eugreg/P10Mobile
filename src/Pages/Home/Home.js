@@ -1,4 +1,4 @@
-import { View, Image, Text } from "react-native";
+import { View, Image, Text, ScrollView } from "react-native";
 import React, { Component } from "react";
 import styles from "./style.js";
 import {
@@ -7,11 +7,10 @@ import {
   MaterialIcons,
   Ionicons,
 } from "@expo/vector-icons";
-import { ScrollView } from "react-native";
-import Destaques from "../../components/Destaques/Produtos"
-import Visitados from "../../components/Visitados/Produtos"
-import Ofertas from "../../components/Ofertas/Produtos"
-import NovosProdutos from "../../components/Novos/Produtos"
+import Destaques from "../../components/Destaques/Produtos";
+import Visitados from "../../components/Visitados/Produtos";
+import Ofertas from "../../components/Ofertas/Produtos";
+import NovosProdutos from "../../components/Novos/Produtos";
 
 export default class Home extends Component {
   render() {
@@ -34,7 +33,7 @@ export default class Home extends Component {
                   <Feather name="paperclip" size={24} color="white" />
                 </View>
                 <Text
-                  style={{ fontWeight: "600", fontSize: 14, color: "black" }}
+                  style={{ fontWeight: "600", fontSize: 14, marginHorizontal: 10, color: "white" }}
                 >
                   Papelaria
                 </Text>
@@ -44,7 +43,7 @@ export default class Home extends Component {
                   <MaterialIcons name="toys" size={24} color="white" />
                 </View>
                 <Text
-                  style={{ fontWeight: "600", fontSize: 14, color: "black" }}
+                  style={{ fontWeight: "600", fontSize: 14, marginHorizontal: 10, color: "white" }}
                 >
                   Brinquedos
                 </Text>
@@ -54,7 +53,7 @@ export default class Home extends Component {
                   <FontAwesome5 name="pump-soap" size={24} color="white" />
                 </View>
                 <Text
-                  style={{ fontWeight: "600", fontSize: 14, color: "black" }}
+                  style={{ fontWeight: "600", fontSize: 14, marginHorizontal: 10, color: "white" }}
                 >
                   Limpeza
                 </Text>
@@ -64,17 +63,17 @@ export default class Home extends Component {
                   <FontAwesome5 name="house-damage" size={24} color="white" />
                 </View>
                 <Text
-                  style={{ fontWeight: "600", fontSize: 14, color: "black" }}
+                  style={{ fontWeight: "600", fontSize: 14, marginHorizontal: 10, color: "white" }}
                 >
                   Casa
                 </Text>
               </View>
               <View style={styles.cardCategorias}>
-              <View style={styles.iconeNav}>
+                <View style={styles.iconeNav}>
                   <Ionicons name="shirt" size={24} color="white" />
                 </View>
                 <Text
-                  style={{ fontWeight: "600", fontSize: 14, color: "black" }}
+                  style={{ fontWeight: "600", fontSize: 14, marginHorizontal: 10, color: "white" }}
                 >
                   Roupas
                 </Text>

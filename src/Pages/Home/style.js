@@ -7,7 +7,6 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   navCategorias: {
-    height: 140,
     padding: 10,
     backgroundColor: "white",
     justifyContent: "center",
@@ -19,10 +18,12 @@ const styles = StyleSheet.create({
     borderRadius: 50,
   },
   cardCategorias: {
-    flexDirection: "column",
-    width: 110,
-    paddingHorizontal: 15,
-    borderRadius: 15,
+    flexDirection: "row",
+    marginRight: 15,
+    borderRadius: 10,
+    borderColor: "black",
+    borderWidth: 2,
+    backgroundColor: "black",
     justifyContent: "center",
     alignItems: "center",
   },
@@ -36,7 +37,7 @@ const styles = StyleSheet.create({
   iconeNav: {
     backgroundColor: "black",
     borderRadius: 10,
-    padding: 15,
+    padding: 10,
   },
 });
 
