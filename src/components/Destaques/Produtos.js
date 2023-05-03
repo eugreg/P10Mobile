@@ -12,7 +12,7 @@ export default class Destaques extends Component {
     const cards = [
       {
         id: 1,
-        nome: "EVGA Mouse gamer",
+        nome: "EVGA Mouse gamer 11o",
         preco: 5.22,
         desconto: 5,
         imagem:
@@ -20,7 +20,7 @@ export default class Destaques extends Component {
       },
       {
         id: 2,
-        nome: "EVGA Mouse gamer",
+        nome: "EVGA Mouse gamer 22o",
         preco: 5.22,
         desconto: 5,
         imagem:
@@ -97,7 +97,7 @@ export default class Destaques extends Component {
           </TouchableOpacity> */}
           <View style={styles.produtos}>
           {cards.map((card) => (
-            <CardProdutos key={card.id} card={card} />
+            <CardProdutos key={card.id} card={card} navigation={this.props.navigation}/>
           ))}
         </View>
         </View>

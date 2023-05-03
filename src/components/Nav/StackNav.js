@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Teste from '../../Pages/Pord/Teste';
+import Produto from '../../Pages/Produto/Produto';
 
 const Stack = createNativeStackNavigator();
 
@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <NavigationContainer>
         <Stack.Navigator>
-          <Stack.Screen name="Teste" component={Teste} />
+          <Stack.Screen name="Produto" component={Produto} />
         </Stack.Navigator>
       </NavigationContainer>
     );

@@ -10,7 +10,7 @@ export default class Ofertas extends Component {
     const cards = [
       {
         id: 1,
-        nome: "EVGA Mouse gamer",
+        nome: "EVGA Mouse gamer 11",
         preco: 5.22,
         quantidade: 5,
         imagem:
@@ -18,7 +18,7 @@ export default class Ofertas extends Component {
       },
       {
         id: 2,
-        nome: "EVGA Mouse gamer",
+        nome: "EVGA Mouse gamer 22",
         preco: 5.22,
         quantidade: 5,
         imagem:

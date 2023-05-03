@@ -3,9 +3,8 @@ import React, { Component } from "react";
 import styles from "./style.js";
 import { Ionicons } from "@expo/vector-icons";
 
-import Carousel from "react-native-reanimated-carousel";
 
-function Produto() {
+function Produto({route}) {
   /*   const width = Dimensions.get("window").width;
    */ return (
     <View style={styles.main}>
@@ -16,7 +15,7 @@ function Produto() {
       <View style={{ padding: 10 }}>
         <ScrollView>
           <View style={{marginVertical: 10}}>
-            <Text style={{ fontWeight: "bold", fontSize: 17 }} >NOME DO DO PRODUTO</Text>
+            <Text style={{ fontWeight: "bold", fontSize: 17 }} >NOME DO DO PRODUTO -{route.params.id}</Text>
             <Text style={{ fontWeight: "bold", color: "#FF0000", fontSize: 20 }}>R$3,00</Text>
           </View>
           <View style={styles.filtros}>
