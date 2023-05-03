@@ -12,7 +12,13 @@ import Visitados from "../../components/Visitados/Produtos";
 import Ofertas from "../../components/Ofertas/Produtos";
 import NovosProdutos from "../../components/Novos/Produtos";
 
-export default class Home extends Component {
+import Produto from "../Produto/Produto";
+
+import { createStackNavigator } from "@react-navigation/stack";
+
+const Stack = createStackNavigator()
+
+class HomeClass extends Component {
   render() {
     return (
       <View style={styles.main}>
@@ -33,7 +39,12 @@ export default class Home extends Component {
                   <Feather name="paperclip" size={24} color="white" />
                 </View>
                 <Text
-                  style={{ fontWeight: "600", fontSize: 14, marginHorizontal: 10, color: "white" }}
+                  style={{
+                    fontWeight: "600",
+                    fontSize: 14,
+                    marginHorizontal: 10,
+                    color: "white",
+                  }}
                 >
                   Papelaria
                 </Text>
@@ -43,7 +54,12 @@ export default class Home extends Component {
                   <MaterialIcons name="toys" size={24} color="white" />
                 </View>
                 <Text
-                  style={{ fontWeight: "600", fontSize: 14, marginHorizontal: 10, color: "white" }}
+                  style={{
+                    fontWeight: "600",
+                    fontSize: 14,
+                    marginHorizontal: 10,
+                    color: "white",
+                  }}
                 >
                   Brinquedos
                 </Text>
@@ -53,7 +69,12 @@ export default class Home extends Component {
                   <FontAwesome5 name="pump-soap" size={24} color="white" />
                 </View>
                 <Text
-                  style={{ fontWeight: "600", fontSize: 14, marginHorizontal: 10, color: "white" }}
+                  style={{
+                    fontWeight: "600",
+                    fontSize: 14,
+                    marginHorizontal: 10,
+                    color: "white",
+                  }}
                 >
                   Limpeza
                 </Text>
@@ -63,7 +84,12 @@ export default class Home extends Component {
                   <FontAwesome5 name="house-damage" size={24} color="white" />
                 </View>
                 <Text
-                  style={{ fontWeight: "600", fontSize: 14, marginHorizontal: 10, color: "white" }}
+                  style={{
+                    fontWeight: "600",
+                    fontSize: 14,
+                    marginHorizontal: 10,
+                    color: "white",
+                  }}
                 >
                   Casa
                 </Text>
@@ -73,7 +99,12 @@ export default class Home extends Component {
                   <Ionicons name="shirt" size={24} color="white" />
                 </View>
                 <Text
-                  style={{ fontWeight: "600", fontSize: 14, marginHorizontal: 10, color: "white" }}
+                  style={{
+                    fontWeight: "600",
+                    fontSize: 14,
+                    marginHorizontal: 10,
+                    color: "white",
+                  }}
                 >
                   Roupas
                 </Text>
@@ -81,7 +112,7 @@ export default class Home extends Component {
             </ScrollView>
           </View>
           <View style={styles.produtos}>
-            <Destaques />
+            <Destaques navigation={this.props.navigation} />
             <Ofertas />
             <Visitados />
             <NovosProdutos />
@@ -90,4 +121,17 @@ export default class Home extends Component {
       </View>
     );
   }
+}
+
+function HomeWrap({navigation}) {
+  return <HomeClass navigation={navigation} />
+}
+
+export default function Home() {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name="Home" component={HomeWrap} options={{headerShown: false}} />
+      <Stack.Screen name="Produto" component={Produto} />
+    </Stack.Navigator>
+  )
 }
