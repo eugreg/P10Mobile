@@ -3,9 +3,17 @@ import React, { Component } from "react";
 import { Ionicons } from "@expo/vector-icons";
 import CardProdutos from "./CardProduto/Card";
 import styles from "./style";
+import { TouchableOpacity } from "react-native-web";
 
-export default class Destaques extends Component {
+
+ export default class Destaques extends Component {
+
+  handlePress = () => {
+    this.props.navigation.navigate('Teste');
+  };
+  
   render() {
+    
     return (
       <View style={{ paddingHorizontal: 10, width: "100%" }}>
         <View
@@ -38,7 +46,9 @@ export default class Destaques extends Component {
           </View>
         </View>
         <View style={styles.produtos}>
-          <CardProdutos />
+          <TouchableOpacity onPress={this.handlePress}>
+            <CardProdutos />
+          </TouchableOpacity>
           <CardProdutos />
           <CardProdutos />
           <CardProdutos />

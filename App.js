@@ -1,9 +1,15 @@
 import { StyleSheet, Text, View } from 'react-native';
 import Header from "./src/components/Header/Header"
 import Nav from "./src/components/Nav/Nav"
+
+
+
+
 export default function App() {
   return (
     <View style={styles.body}>
+
+    
       <Header />
       <Nav />
     </View>
