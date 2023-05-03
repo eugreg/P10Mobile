@@ -1,27 +1,39 @@
 import { ScrollView, Text, View } from "react-native";
 import React, { Component } from "react";
 import styles from "./style.js";
+import ProdutoNovos from "../../components/Novos/Produtos.js";
 import { Ionicons } from "@expo/vector-icons";
 
-import Carousel from "react-native-reanimated-carousel";
+/* import Carousel from "react-native-reanimated-carousel";
+ */
 
 function Produto() {
   /*   const width = Dimensions.get("window").width;
    */ return (
     <View style={styles.main}>
-      <View
-        style={{ width: "100%", height: 200, backgroundColor: "black" }}
-      ></View>
-      {/* imagem aqui */}
-      <View style={{ padding: 10 }}>
-        <ScrollView>
-          <View style={{marginVertical: 10}}>
-            <Text style={{ fontWeight: "bold", fontSize: 17 }} >NOME DO DO PRODUTO</Text>
-            <Text style={{ fontWeight: "bold", color: "#FF0000", fontSize: 20 }}>R$3,00</Text>
+      <ScrollView>
+        <View
+          style={{ width: "100%", height: 200, backgroundColor: "black" }}
+        ></View>
+        {/* imagem aqui */}
+        <View style={{ padding: 10 }}>
+          <View style={{ marginVertical: 10 }}>
+            <Text style={{ fontWeight: "bold", fontSize: 17 }}>
+              NOME DO DO PRODUTO
+            </Text>
+            <Text
+              style={{ fontWeight: "bold", color: "#FF0000", fontSize: 20 }}
+            >
+              R$3,00
+            </Text>
           </View>
           <View style={styles.filtros}>
             <View style={{ marginBottom: 10 }}>
-              <Text style={{ fontWeight: "bold", fontSize: 15, marginBottom: 5 }}>Cor do produto</Text>
+              <Text
+                style={{ fontWeight: "bold", fontSize: 15, marginBottom: 5 }}
+              >
+                Cor do produto
+              </Text>
               <ScrollView horizontal={true}>
                 <View style={styles.cardCor}></View>
                 <View style={styles.cardCor}></View>
@@ -29,8 +41,12 @@ function Produto() {
                 <View style={styles.cardCor}></View>
               </ScrollView>
             </View>
-            <View style={{marginBottom: 10}}>
-              <Text style={{ fontWeight: "bold", fontSize: 15, marginBottom: 5 }}>Tamanho do produto</Text>
+            <View style={{ marginBottom: 10 }}>
+              <Text
+                style={{ fontWeight: "bold", fontSize: 15, marginBottom: 5 }}
+              >
+                Tamanho do produto
+              </Text>
               <ScrollView horizontal={true}>
                 <View style={styles.cardTamanho}>
                   <Text>Gigante</Text>
@@ -48,15 +64,33 @@ function Produto() {
             </View>
           </View>
           <View style={styles.especificacao}>
-            <Text style={{ fontWeight: "bold", fontSize: 15, marginBottom: 5 }}>Especificação</Text>
+            <Text style={{ fontWeight: "bold", fontSize: 15, marginBottom: 5 }}>
+              Especificação
+            </Text>
             <Ionicons
               name="ios-arrow-forward-circle-sharp"
               size={24}
-              color="#555"
+              color="#000"
             />
           </View>
-        </ScrollView>
-      </View>
+          <View style={styles.descricao}>
+            <Text style={{ fontWeight: "bold", fontSize: 15, marginBottom: 5 }}>
+              Descrição
+            </Text>
+          </View>
+          <View style={styles.avaliacao}>
+            <Text style={{ fontWeight: "bold", fontSize: 15, marginBottom: 5 }}>
+              Avaliação
+            </Text>
+            <Ionicons
+              name="ios-arrow-forward-circle-sharp"
+              size={24}
+              color="#000"
+            />
+          </View>
+        </View>
+        <ProdutoNovos />
+      </ScrollView>
 
       {/*       <Carousel
         loop
