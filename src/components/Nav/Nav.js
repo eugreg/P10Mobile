@@ -18,9 +18,11 @@ export default function Nav() {
         tabBarOptions={{
           activeTintColor: "red",
           inactiveTintColor: "red",
-          style: {
-            padding: 58,
-          },
+          tabBarStyle: [
+            {
+              alignItems: "center",
+            }
+          ]
         }}
       >
         <Tab.Screen

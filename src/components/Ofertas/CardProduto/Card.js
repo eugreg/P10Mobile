@@ -10,12 +10,12 @@ export default class card extends Component {
         <Image
           style={{ width: "100%", height: 100, borderRadius: 20 }}
           source={{
-            uri: "https://m.media-amazon.com/images/I/71j5dgh0GSL._AC_SX679_.jpg",
+            uri: this.props.card.imagem,
           }}
         ></Image>
-        <Text style={{fontWeight: "600"}}>EVGA Mouse gamer</Text>
+        <Text style={{fontWeight: "600"}}>{this.props.card.nome}</Text>
         <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
-          <Text>R$10.00</Text>
+          <Text>R${this.props.card.preco}</Text>
           <Text
             style={{
               backgroundColor: "#FF0000",
@@ -25,7 +25,7 @@ export default class card extends Component {
               borderRadius: 10,
             }}
           >
-            50% OFF
+            {this.props.card.quantidade} Unid.
           </Text>
         </View>
       </View>

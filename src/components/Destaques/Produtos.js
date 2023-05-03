@@ -1,19 +1,65 @@
-import { Text, View } from "react-native";
+import { Text, View, TouchableOpacity } from "react-native";
 import React, { Component } from "react";
 import { Ionicons } from "@expo/vector-icons";
-import CardProdutos from "./CardProduto/Card";
+import CardProdutos from "./CardProduto/Card.js";
 import styles from "./style";
-import { TouchableOpacity } from "react-native-web";
 
-
- export default class Destaques extends Component {
-
-  handlePress = () => {
-    this.props.navigation.navigate('Teste');
-  };
-  
+export default class Destaques extends Component {
+/*   handlePress = () => {
+    this.props.navigation.navigate("Teste");
+  }; */
   render() {
-    
+    const cards = [
+      {
+        id: 1,
+        nome: "EVGA Mouse gamer",
+        preco: 5.22,
+        desconto: 5,
+        imagem:
+          "https://m.media-amazon.com/images/I/71j5dgh0GSL._AC_SX679_.jpg",
+      },
+      {
+        id: 2,
+        nome: "EVGA Mouse gamer",
+        preco: 5.22,
+        desconto: 5,
+        imagem:
+          "https://m.media-amazon.com/images/I/71j5dgh0GSL._AC_SX679_.jpg",
+      },
+      {
+        id: 3,
+        nome: "EVGA Mouse gamer",
+        preco: 5.22,
+        desconto: 5,
+        imagem:
+          "https://m.media-amazon.com/images/I/71j5dgh0GSL._AC_SX679_.jpg",
+      },
+      {
+        id: 4,
+        nome: "EVGA Mouse gamer",
+        preco: 5.22,
+        desconto: 5,
+        imagem:
+          "https://m.media-amazon.com/images/I/71j5dgh0GSL._AC_SX679_.jpg",
+      },
+      {
+        id: 5,
+        nome: "EVGA Mouse gamer",
+        preco: 5.22,
+        desconto: 5,
+        imagem:
+          "https://m.media-amazon.com/images/I/71j5dgh0GSL._AC_SX679_.jpg",
+      },
+      {
+        id: 6,
+        nome: "EVGA Mouse gamer",
+        preco: 5.22,
+        desconto: 5,
+        imagem:
+          "https://m.media-amazon.com/images/I/71j5dgh0GSL._AC_SX679_.jpg",
+      },
+
+    ];
     return (
       <View style={{ paddingHorizontal: 10, width: "100%" }}>
         <View
@@ -46,14 +92,14 @@ import { TouchableOpacity } from "react-native-web";
           </View>
         </View>
         <View style={styles.produtos}>
-          <TouchableOpacity onPress={this.handlePress}>
+{/*           <TouchableOpacity onPress={this.handlePress}>
             <CardProdutos />
-          </TouchableOpacity>
-          <CardProdutos />
-          <CardProdutos />
-          <CardProdutos />
-          <CardProdutos />
-          <CardProdutos />
+          </TouchableOpacity> */}
+          <View style={styles.produtos}>
+          {cards.map((card) => (
+            <CardProdutos key={card.id} card={card} />
+          ))}
+        </View>
         </View>
       </View>
     );
