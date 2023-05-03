@@ -1,8 +1,8 @@
+import ProdutoNovos from "../../components/Novos/Produtos.js";
 import { ScrollView, Text, View } from "react-native";
 import React, { Component } from "react";
-import styles from "./style.js";
-import ProdutoNovos from "../../components/Novos/Produtos.js";
 import { Ionicons } from "@expo/vector-icons";
+import styles from "./style.js";
 
 /* import Carousel from "react-native-reanimated-carousel";
  */

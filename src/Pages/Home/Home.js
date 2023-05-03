@@ -1,16 +1,16 @@
+import Destaques from "../../components/Destaques/Produtos";
+import Visitados from "../../components/Visitados/Produtos";
+import Ofertas from "../../components/Ofertas/Produtos";
+import NovosProdutos from "../../components/Novos/Produtos";
 import { View, Image, Text, ScrollView } from "react-native";
 import React, { Component } from "react";
-import styles from "./style.js";
 import {
   Feather,
   FontAwesome5,
   MaterialIcons,
   Ionicons,
 } from "@expo/vector-icons";
-import Destaques from "../../components/Destaques/Produtos";
-import Visitados from "../../components/Visitados/Produtos";
-import Ofertas from "../../components/Ofertas/Produtos";
-import NovosProdutos from "../../components/Novos/Produtos";
+import styles from "./style.js";
 
 import Produto from "../Produto/Produto";
 
@@ -29,7 +29,12 @@ class HomeClass extends Component {
           />
           <View style={styles.navCategorias}>
             <Text
-              style={{ fontWeight: "bold", color: "#FF0000", fontSize: 17, marginBottom: 5 }}
+              style={{
+                fontWeight: "bold",
+                color: "#FF0000",
+                fontSize: 17,
+                marginBottom: 5,
+              }}
             >
               CATEGORIAS
             </Text>
