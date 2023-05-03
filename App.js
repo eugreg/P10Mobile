@@ -14,7 +14,7 @@ export default function App() {
 const styles = StyleSheet.create({
   body: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#f8f8f8",
     marginTop: 30,
   },
 });

@@ -3,7 +3,7 @@ const styles = StyleSheet.create({
     produtos: {
         flexDirection: "row",
         flexWrap: "wrap",
-        justifyContent: "space-around",
+        justifyContent: "space-between",
         alignItems: 'center',
     }
 })

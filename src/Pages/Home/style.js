@@ -11,27 +11,23 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     justifyContent: "center",
   },
-  categoriaImagem: {
-    width: 35,
-    height: 35,
-    marginRight: 10,
-    borderRadius: 50,
-  },
   cardCategorias: {
     flexDirection: "row",
     marginRight: 15,
     borderRadius: 10,
-    borderColor: "black",
-    borderWidth: 2,
-    backgroundColor: "black",
+    backgroundColor: "#F8F8F8",
     justifyContent: "center",
     alignItems: "center",
   },
+  textoCategoria: {
+    fontWeight: "600",
+    fontSize: 14,
+    marginHorizontal: 10,
+    color: "black",
+  },
   produtos: {
     padding: 10,
-    backgroundColor: "#FFF",
     marginTop: 10,
-
     alignItems: "center",
   },
   iconeNav: {

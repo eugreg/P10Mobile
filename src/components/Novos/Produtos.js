@@ -43,7 +43,15 @@ export default class NovosProdutos extends Component {
     /* aqui vai ter muitooooo mais produto (acho que todos os produtos da loja).
      Seria um scroll infinito como da Shein, Shopee e essas lojas aí */
     return (
-      <View style={{ paddingHorizontal: 10, width: "100%", marginTop: 20 }}>
+      <View
+        style={{
+          padding: 10,
+          width: "100%",
+          marginBottom: 10,
+          borderRadius: 10,
+          backgroundColor: "#fff",
+        }}
+      >
         <View
           style={{
             flexDirection: "row",

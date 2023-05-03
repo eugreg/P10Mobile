@@ -7,7 +7,7 @@ export default class card extends Component {
     return (
       <View style={styles.card}>
         <Image
-          style={{ width: "100%", height: 100, borderRadius: 20 }}
+          style={{ width: "100%", height: 100, borderRadius: 10 }}
           source={{
             uri: this.props.card.imagem
           }}

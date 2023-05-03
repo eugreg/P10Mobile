@@ -16,7 +16,7 @@ import Produto from "../Produto/Produto";
 
 import { createStackNavigator } from "@react-navigation/stack";
 
-const Stack = createStackNavigator()
+const Stack = createStackNavigator();
 
 class HomeClass extends Component {
   render() {
@@ -29,7 +29,7 @@ class HomeClass extends Component {
           />
           <View style={styles.navCategorias}>
             <Text
-              style={{ fontWeight: "bold", color: "#FF0000", fontSize: 17 }}
+              style={{ fontWeight: "bold", color: "#FF0000", fontSize: 17, marginBottom: 5 }}
             >
               CATEGORIAS
             </Text>
@@ -38,76 +38,31 @@ class HomeClass extends Component {
                 <View style={styles.iconeNav}>
                   <Feather name="paperclip" size={24} color="white" />
                 </View>
-                <Text
-                  style={{
-                    fontWeight: "600",
-                    fontSize: 14,
-                    marginHorizontal: 10,
-                    color: "white",
-                  }}
-                >
-                  Papelaria
-                </Text>
+                <Text style={styles.textoCategoria}>Papelaria</Text>
               </View>
               <View style={styles.cardCategorias}>
                 <View style={styles.iconeNav}>
                   <MaterialIcons name="toys" size={24} color="white" />
                 </View>
-                <Text
-                  style={{
-                    fontWeight: "600",
-                    fontSize: 14,
-                    marginHorizontal: 10,
-                    color: "white",
-                  }}
-                >
-                  Brinquedos
-                </Text>
+                <Text style={styles.textoCategoria}>Brinquedos</Text>
               </View>
               <View style={styles.cardCategorias}>
                 <View style={styles.iconeNav}>
                   <FontAwesome5 name="pump-soap" size={24} color="white" />
                 </View>
-                <Text
-                  style={{
-                    fontWeight: "600",
-                    fontSize: 14,
-                    marginHorizontal: 10,
-                    color: "white",
-                  }}
-                >
-                  Limpeza
-                </Text>
+                <Text style={styles.textoCategoria}>Limpeza</Text>
               </View>
               <View style={styles.cardCategorias}>
                 <View style={styles.iconeNav}>
                   <FontAwesome5 name="house-damage" size={24} color="white" />
                 </View>
-                <Text
-                  style={{
-                    fontWeight: "600",
-                    fontSize: 14,
-                    marginHorizontal: 10,
-                    color: "white",
-                  }}
-                >
-                  Casa
-                </Text>
+                <Text style={styles.textoCategoria}>Casa</Text>
               </View>
               <View style={styles.cardCategorias}>
                 <View style={styles.iconeNav}>
                   <Ionicons name="shirt" size={24} color="white" />
                 </View>
-                <Text
-                  style={{
-                    fontWeight: "600",
-                    fontSize: 14,
-                    marginHorizontal: 10,
-                    color: "white",
-                  }}
-                >
-                  Roupas
-                </Text>
+                <Text style={styles.textoCategoria}>Roupas</Text>
               </View>
             </ScrollView>
           </View>
@@ -123,15 +78,19 @@ class HomeClass extends Component {
   }
 }
 
-function HomeWrap({navigation}) {
-  return <HomeClass navigation={navigation} />
+function HomeWrap({ navigation }) {
+  return <HomeClass navigation={navigation} />;
 }
 
 export default function Home() {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Home" component={HomeWrap} options={{headerShown: false}} />
+      <Stack.Screen
+        name="Home"
+        component={HomeWrap}
+        options={{ headerShown: false }}
+      />
       <Stack.Screen name="Produto" component={Produto} />
     </Stack.Navigator>
-  )
+  );
 }

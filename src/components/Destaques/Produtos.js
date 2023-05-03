@@ -5,14 +5,14 @@ import CardProdutos from "./CardProduto/Card.js";
 import styles from "./style";
 
 export default class Destaques extends Component {
-/*   handlePress = () => {
+  /*   handlePress = () => {
     this.props.navigation.navigate("Teste");
   }; */
   render() {
     const cards = [
       {
         id: 1,
-        nome: "EVGA Mouse gamer 11o",
+        nome: "EVGA Mouse gamer",
         preco: 5.22,
         desconto: 5,
         imagem:
@@ -20,7 +20,7 @@ export default class Destaques extends Component {
       },
       {
         id: 2,
-        nome: "EVGA Mouse gamer 22o",
+        nome: "EVGA Mouse gamer",
         preco: 5.22,
         desconto: 5,
         imagem:
@@ -58,10 +58,17 @@ export default class Destaques extends Component {
         imagem:
           "https://m.media-amazon.com/images/I/71j5dgh0GSL._AC_SX679_.jpg",
       },
-
     ];
     return (
-      <View style={{ paddingHorizontal: 10, width: "100%" }}>
+      <View
+        style={{
+          padding: 10,
+          width: "100%",
+          marginBottom: 10,
+          borderRadius: 10,
+          backgroundColor: "#fff",
+        }}
+      >
         <View
           style={{
             flexDirection: "row",
@@ -92,14 +99,13 @@ export default class Destaques extends Component {
           </View>
         </View>
         <View style={styles.produtos}>
-{/*           <TouchableOpacity onPress={this.handlePress}>
-            <CardProdutos />
-          </TouchableOpacity> */}
-          <View style={styles.produtos}>
           {cards.map((card) => (
-            <CardProdutos key={card.id} card={card} navigation={this.props.navigation}/>
+            <CardProdutos
+              key={card.id}
+              card={card}
+              navigation={this.props.navigation}
+            />
           ))}
-        </View>
         </View>
       </View>
     );

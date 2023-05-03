@@ -41,7 +41,15 @@ export default class Visitados extends Component {
       },
     ];
     return (
-      <View style={{ paddingHorizontal: 10, width: "100%", marginTop: 20 }}>
+      <View
+        style={{
+          padding: 10,
+          width: "100%",
+          marginBottom: 10,
+          borderRadius: 10,
+          backgroundColor: "#fff",
+        }}
+      >
         <View
           style={{
             flexDirection: "row",

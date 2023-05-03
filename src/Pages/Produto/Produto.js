@@ -7,22 +7,9 @@ import { Ionicons } from "@expo/vector-icons";
 /* import Carousel from "react-native-reanimated-carousel";
  */
 
-
-function Produto({route}) {
-  /*   const width = Dimensions.get("window").width;
-   */ return (
+function Produto({ route }) {
+  return (
     <View style={styles.main}>
-
-      <View
-        style={{ width: "100%", height: 200, backgroundColor: "black" }}
-      ></View>
-      {/* imagem aqui */}
-      <View style={{ padding: 10 }}>
-        <ScrollView>
-          <View style={{marginVertical: 10}}>
-            <Text style={{ fontWeight: "bold", fontSize: 17 }} >NOME DO DO PRODUTO -{route.params.id}</Text>
-            <Text style={{ fontWeight: "bold", color: "#FF0000", fontSize: 20 }}>R$3,00</Text>
-
       <ScrollView>
         <View
           style={{ width: "100%", height: 200, backgroundColor: "black" }}
@@ -31,7 +18,7 @@ function Produto({route}) {
         <View style={{ padding: 10 }}>
           <View style={{ marginVertical: 10 }}>
             <Text style={{ fontWeight: "bold", fontSize: 17 }}>
-              NOME DO DO PRODUTO
+              NOME DO DO PRODUTO -{route.params.id}
             </Text>
             <Text
               style={{ fontWeight: "bold", color: "#FF0000", fontSize: 20 }}

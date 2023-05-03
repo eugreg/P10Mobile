@@ -8,7 +8,7 @@ export default class card extends Component {
     return (
       <TouchableOpacity style={styles.card} onPress={() => this.props.navigation.navigate('Produto', {id: 29})}>
           <Image
-            style={{ width: "100%", height: 100, borderRadius: 20 }}
+            style={{ width: "100%", height: 100, borderRadius: 10 }}
             source={{
               uri: this.props.card.imagem,
             }}
