@@ -11,6 +11,16 @@ const styles = StyleSheet.create({
     main: {
         margin: 10,
     },
+    btnVeja: {
+        backgroundColor: "#FF0000",
+        width: "49%",
+        height: 40,
+        borderRadius: 10,
+        padding: 10,
+        marginVertical: 5,
+        fontWeight: "600",
+        color: "white"
+    }
 });
 
 export default styles;

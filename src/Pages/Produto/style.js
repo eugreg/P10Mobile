@@ -11,8 +11,8 @@ const styles = StyleSheet.create({
     backgroundColor: "black",
     borderRadius: 10,
     marginRight: 10,
-    width: 100,
-    height: 40,
+    paddingVertical: 10,
+    paddingHorizontal: 20,
   },
   especificacao: {
     width: "100%",
@@ -29,27 +29,26 @@ const styles = StyleSheet.create({
   descricao: {
     width: "100%",
     height: 150,
-    alignItems: "center",
     justifyContent: "space-between",
     borderColor: "#000",
     borderWidth: 2,
     padding: 10,
     marginBottom: 10,
-    flexDirection: "row",
+    flexDirection: "column",
     borderRadius: 10,
   },
   avaliacao: {
     width: "100%",
-    height: 150,
     marginBottom: 10,
-    alignItems: "center",
-    justifyContent: "space-between",
     borderColor: "#000",
     borderWidth: 2,
     padding: 10,
-    flexDirection: "row",
+    flexDirection: "column",
     borderRadius: 10,
   },
+  cardAvalicao:{
+    marginHorizontal: 5,
+  }
 });
 
 export default styles;
