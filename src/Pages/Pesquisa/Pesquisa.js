@@ -5,7 +5,6 @@ import styles from "./styles";
 function CategoriaCard(props) {
   return (
     <View style={styles.cardCategorias}>
-      {/* vai ter um background de imagem aqui */}
       <Text style={{ marginTop: 40 }}>{props.categoria.nomeCategoria}</Text>
     </View>
   );

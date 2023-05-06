@@ -1,6 +1,5 @@
 import { Text, View } from "react-native";
 import React, { Component } from "react";
-import { Ionicons } from "@expo/vector-icons";
 import CardProdutos from "./CardProduto/Card";
 import styles from "./style";
 

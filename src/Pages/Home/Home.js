@@ -18,8 +18,56 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 const Stack = createStackNavigator();
 
+function CategoriaCard(props) {
+  return (
+    <View style={styles.cardCategorias}>
+      <View style={styles.iconeNav}>
+        <MaterialIcons name={props.categoria.nameIcon} size={24} color="white" />
+      </View>
+      <Text style={styles.textoCategoria}>{props.categoria.nomeCategoria}</Text>
+    </View>
+  );
+}
+
 class HomeClass extends Component {
   render() {
+    const categorias = [
+      {
+        id: 1,
+        nomeCategoria: "Papelaria",
+        nameIcon: "description",
+      },
+      {
+        id: 2,
+        nomeCategoria: "Brinquedos",
+        nameIcon: "toys",
+      },
+      {
+        id: 3,
+        nomeCategoria: "Limpeza",
+        nameIcon: "sanitizer",
+      },
+      {
+        id: 4,
+        nomeCategoria: "Casa",
+        nameIcon: "home",
+      },
+      {
+        id: 5,
+        nomeCategoria: "Roupas",
+        nameIcon: "checkroom",
+      },
+      {
+        id: 6,
+        nomeCategoria: "Livraria",
+        nameIcon: "book",
+      },
+      {
+        id: 7,
+        nomeCategoria: "Mercado",
+        nameIcon: "shopping-cart",
+      },
+    ];
     return (
       <View style={styles.main}>
         <ScrollView>
@@ -39,36 +87,9 @@ class HomeClass extends Component {
               CATEGORIAS
             </Text>
             <ScrollView horizontal={true}>
-              <View style={styles.cardCategorias}>
-                <View style={styles.iconeNav}>
-                  <Feather name="paperclip" size={24} color="white" />
-                </View>
-                <Text style={styles.textoCategoria}>Papelaria</Text>
-              </View>
-              <View style={styles.cardCategorias}>
-                <View style={styles.iconeNav}>
-                  <MaterialIcons name="toys" size={24} color="white" />
-                </View>
-                <Text style={styles.textoCategoria}>Brinquedos</Text>
-              </View>
-              <View style={styles.cardCategorias}>
-                <View style={styles.iconeNav}>
-                  <FontAwesome5 name="pump-soap" size={24} color="white" />
-                </View>
-                <Text style={styles.textoCategoria}>Limpeza</Text>
-              </View>
-              <View style={styles.cardCategorias}>
-                <View style={styles.iconeNav}>
-                  <FontAwesome5 name="house-damage" size={24} color="white" />
-                </View>
-                <Text style={styles.textoCategoria}>Casa</Text>
-              </View>
-              <View style={styles.cardCategorias}>
-                <View style={styles.iconeNav}>
-                  <Ionicons name="shirt" size={24} color="white" />
-                </View>
-                <Text style={styles.textoCategoria}>Roupas</Text>
-              </View>
+              {categorias.map((categoria) => (
+                <CategoriaCard key={categoria.id} categoria={categoria} />
+              ))}
             </ScrollView>
           </View>
           <View style={styles.produtos}>

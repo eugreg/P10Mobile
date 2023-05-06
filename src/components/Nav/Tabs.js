@@ -1,10 +1,7 @@
-/*arrumar para o caminho relativo que no meu pc não ta funcionando (geos)*/
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-
-import styles from "./styles";
 import Pesquisa from "../../Pages/Pesquisa/Pesquisa";
-import Produto from "../../Pages/Produto/Produto";
+import Carrinho from "../../Pages/Carrinho/Carrinho";
 import Home from "../../Pages/Home/Home";
 
 const Tab = createBottomTabNavigator();
@@ -13,7 +10,6 @@ export default function Tabs() {
   return (
     <Tab.Navigator
       initialRouteName="Home"
-      style={styles.nav}
       tabBarOptions={{
         activeTintColor: "red",
         inactiveTintColor: "red",
@@ -52,7 +48,7 @@ export default function Tabs() {
       />
       <Tab.Screen
         name="Produto"
-        component={Home}
+        component={Carrinho}
         /* por enquanto produto */
         options={{
           headerShown: false,
